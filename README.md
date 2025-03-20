@@ -34,7 +34,7 @@ This is an AI-powered interview chatbot named **Monika**, designed to conduct in
 ## Usage
 Run the chatbot with:
 ```bash
-python chatbot.py
+streamlit run app.py
 ```
 
 ## Project Structure
