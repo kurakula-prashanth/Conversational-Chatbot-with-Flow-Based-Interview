@@ -18,8 +18,8 @@ This is an AI-powered interview chatbot named **Monika**, designed to conduct in
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo/ai-interview-chatbot.git
-   cd ai-interview-chatbot
+   git clone https://github.com/your-repo/Conversational-Chatbot-with-Flow-Based-Interview.git
+   cd Conversational-Chatbot-with-Flow-Based-Interview
    ```
 2. Install dependencies:
    ```bash
