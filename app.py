@@ -1,13 +1,18 @@
 import streamlit as st
 from dotenv import load_dotenv
+import os
 
 from config import TITLE, DESCRIPTION, PAGE_ICON, TREE_PATH
 from chatbot import ChatbotBackend
 from styles import load_css
 from ui_components import display_message, display_chat_history
 
-# Load environment variables
-load_dotenv()
+
+# Get API key from environment or Streamlit secrets
+api_key = os.environ.get("GOOGLE_API_KEY") or st.secrets.get("google", {}).get("GOOGLE_API_KEY", "")
+if not api_key:
+    st.error("No Google API key found. Please set GOOGLE_API_KEY in your environment or .streamlit/secrets.toml")
+    st.stop()
 
 def initialize_session_state():
     """Initialize session state variables"""
