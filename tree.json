@@ -1,0 +1,66 @@
+[
+    {
+        "nodeId": "node1",
+        "rootNode": true,
+        "prompt": "Ask if the user is John",
+        "edges": [
+            {
+                "condition": "user is John",
+                "targetNodeId": "node2"
+            },
+            {
+                "condition": "user is not John",
+                "targetNodeId": "node8"
+            }
+        ]
+    },
+    {
+        "nodeId": "node2",
+        "prompt": "Introduce yourself & ask if we can conduct interview right now",
+        "edges": [
+            {
+                "condition": "user is ready to start the interview",
+                "targetNodeId": "node4"
+            },
+            {
+                "condition": "User is not ready to start the interview",
+                "targetNodeId": "node5"
+            }
+        ]
+    },
+    {
+        "nodeId": "node4",
+        "prompt": "Start interview process by asking question 1: 'What are closures in Javascript?'",
+        "edges": [
+            {
+                "condition": "user provides any answer",
+                "targetNodeId": "node6"
+            }
+        ]
+    },
+    {
+        "nodeId": "node5",
+        "prompt": "Apologise to the user & ask if you can end the call",
+        "edges": [
+            {
+                "condition": "user agrees to end call",
+                "targetNodeId": "node7"
+            }
+        ]
+    },
+    {
+        "nodeId": "node6",
+        "prompt": "Thank you for attending. We will get back to you later.",
+        "edges": []
+    },
+    {
+        "nodeId": "node7",
+        "prompt": "We will reschedule to a later date.",
+        "edges": []
+    },
+    {
+        "nodeId": "node8",
+        "prompt": "So wrong candidate. Thank you for your time, and I’m sorry for any inconvenience. Have a great day!",
+        "edges": []
+    }
+]
