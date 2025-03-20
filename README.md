@@ -39,11 +39,14 @@ python chatbot.py
 
 ## Project Structure
 ```
-├── chatbot.py         # Main chatbot script
-├── tree.json          # JSON structure defining the conversation tree
-├── .env               # Environment file for storing API keys
-├── requirements.txt   # Dependencies
-├── README.md          # Project documentation
+project_root/
+├── app.py              # Main application file
+├── chatbot.py          # ChatbotBackend class
+├── config.py           # Configuration and constants
+├── styles.py           # CSS styles
+├── ui_components.py    # UI related functions
+├── tree.json           # Decision tree data (existing file)
+└── .env                # Environment variables (existing file)
 ```
 
 ## Example Tree Structure (tree.json)
