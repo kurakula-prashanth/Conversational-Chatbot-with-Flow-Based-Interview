@@ -75,17 +75,13 @@ python chatbot.py
 ## Outputs
 
 ## 1. User is John and Ready
-
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/b9bce001-0e07-4998-8ddd-c77d1a21b401)
 
 ## 2. User is John but Not Ready
-
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/bead787d-d11b-4f66-a4eb-073f59ed5ba0)
 
 ## 3. User is not John
-
-![alt text](image-2.png)
-
+![image-2](https://github.com/user-attachments/assets/7fb15aa5-3a94-456e-a737-f05abe895688)
 
 ## License
 MIT License
