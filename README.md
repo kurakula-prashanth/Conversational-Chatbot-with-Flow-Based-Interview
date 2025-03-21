@@ -2,6 +2,10 @@
 
 This is an AI-powered interview chatbot named **Monika**, designed to conduct interviews for the **Frontend Developer** role. It follows a structured decision tree to navigate conversations and assess candidates based on predefined conditions.
 
+## Deployed in Streamlit
+[Click here to visit the chatbot](https://conversational-chatbot-with-flow-based-interview-x6kkcbguh8kb7.streamlit.app/)
+
+
 ## Features
 - Loads a **tree-based conversation structure** from a JSON file.
 - Uses **Gemini 2.0 Flash** from Google Generative AI for intelligent responses.
