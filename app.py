@@ -1,18 +1,18 @@
 import streamlit as st
-from dotenv import load_dotenv
-import os
+from config import TITLE, DESCRIPTION, PAGE_ICON, TREE_PATH  # Import first
 
-from config import TITLE, DESCRIPTION, PAGE_ICON, TREE_PATH
+# ✅ Move set_page_config as the first Streamlit command
+st.set_page_config(page_title=TITLE, page_icon=PAGE_ICON)
+
+import os
+from dotenv import load_dotenv
 from chatbot import ChatbotBackend
 from styles import load_css
 from ui_components import display_message, display_chat_history
 
-
-# Get API key from environment or Streamlit secrets
-api_key = os.environ.get("GOOGLE_API_KEY") or st.secrets.get("google", {}).get("GOOGLE_API_KEY", "")
-if not api_key:
-    st.error("No Google API key found. Please set GOOGLE_API_KEY in your environment or .streamlit/secrets.toml")
-    st.stop()
+# ✅ Access secrets AFTER set_page_config
+# Hide API key from being displayed
+os.environ["GOOGLE_API_KEY"] = st.secrets["google"]["GOOGLE_API_KEY"]
 
 def initialize_session_state():
     """Initialize session state variables"""
@@ -105,9 +105,6 @@ def reset_conversation():
 
 def main():
     """Main application function"""
-    # Set up page configuration
-    st.set_page_config(page_title=TITLE, page_icon=PAGE_ICON)
-    
     # Load and apply CSS
     st.markdown(load_css(), unsafe_allow_html=True)
     
